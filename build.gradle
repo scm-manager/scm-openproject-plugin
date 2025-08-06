@@ -1,0 +1,45 @@
+/*
+ * Copyright (c) 2020 - present Cloudogu GmbH
+ *
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License as published by the Free
+ * Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see https://www.gnu.org/licenses/.
+ */
+
+plugins {
+  id 'org.scm-manager.smp' version '0.17.2'
+}
+
+dependencies {
+  plugin "sonia.scm.plugins:scm-issuetracker-plugin:3.2.0"
+  optionalPlugin "sonia.scm.plugins:scm-commit-message-checker-plugin:1.0.0"
+
+  testImplementation "com.github.sdorra:shiro-unit:1.0.1"
+}
+
+scmPlugin {
+  scmVersion = "3.9.0"
+  displayName = "Redmine"
+  description = "Redmine/EasyRedmine integration"
+  author = "Marvin Froeder"
+  category = "Issue Tracker"
+  avatarUrl = '/images/redmine-logo.png'
+
+  run {
+    loggingConfiguration = 'src/main/conf/logging.xml'
+  }
+
+  openapi {
+    packages = [
+      "sonia.scm.redmine.config",
+    ]
+  }
+}

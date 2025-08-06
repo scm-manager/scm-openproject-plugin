@@ -1,0 +1,83 @@
+{
+  "scm-redmine-plugin": {
+    "config": {
+      "link": "Redmine / Easy Redmine",
+      "title": "Redmine / Easy Redmine",
+      "form": {
+        "url": "URL",
+        "url-helptext": "URL der Redmine / Easy Redmine Installation (inkl. Kontextpfad).",
+        "username": "Benutzername",
+        "username-helptext": "Der Redmine / Easy Redmine Benutzername",
+        "password": "Passwort",
+        "password-helptext": "Das Redmine / Easy Redmine Passwort",
+        "textFormatting": "Text Formatierung",
+        "textFormatting-helptext": "Art der Text Formatierung für die Redmine / Easy Redmine Kommentare.",
+        "autoClose": "Ticket Statusänderung",
+        "autoClose-helptext": "Aktiviert Statusänderungen. Der SCM-Manager sucht nach Ticket IDs und Ticket Status Schlüsselwörtern in den Commit Nachrichten und in Pull Requests. Der Status des Redmine / Easy Redmine Tickets wird bei einem Treffer entsprechend geändert.",
+        "disableStateChangeByCommit": "Deaktiviere Statusänderungen durch Commits",
+        "disableStateChangeByCommit-helptext": "Deaktiviert Statusänderungen aufgrund von Commits. Wenn diese Options aktiviert ist, werden Statusänderungen nur noch aufgrund von Pull Requests durchgeführt.",
+        "updateIssues": "Ticket Aktualisierung mit Kommentar",
+        "updateIssues-helptext": "Aktiviert Aktualisierungen der Redmine / Easy Redmine Tickets. Der SCM-Manager sucht nach Ticket IDs in Commit Nachrichten und Pull Requests. Wird ein Redmine Ticket gefunden, dann aktualisiert der SCM-Manager das Ticket mit einem Kommentar.",
+        "disableRepositoryConfiguration": "Deaktiviere die Repository spezifische Konfiguration.",
+        "disableRepositoryConfiguration-helptext": "Repository OWNER dürfen keine Redmine / Easy Redmine Instanzen konfigurieren. Der SCM-Manager Webserver muss nach dieser Änderung neugestartet werden."
+      }
+    },
+    "mapping": {
+      "title": "Redmine / Easy Redmine Status Mapping",
+      "help": "Ordne Schlüsselwörter einem Redmine / Easy Redmine-Status zu, um Zustandsänderungen mit diesen Schlüsselwörtern auszulösen.",
+      "status": "Redmine / Easy Redmine Status",
+      "statusHelp": "Name des Redmine / Easy Redmine-Status z.B.: Closed",
+      "keywords": "Liste der Schlüsselwörter",
+      "keywordsPlaceholder": "Keyword1,Keyword2",
+      "keywordsHelp": "Kommagetrennte Liste von Schlüsselwörtern, die dem Status zugeordnet werden sollen, z. B.: closes, closing",
+      "no-mapping": "Keine Mappings definiert",
+      "add": "Mapping hinzufügen",
+      "remove": "Mapping entfernen"
+    }
+  },
+  "permissions": {
+    "configuration": {
+      "read,write": {
+        "redmine": {
+          "displayName": "Globale Redmine / Easy Redmine Konfiguration ändern",
+          "description": "Darf die globale Redmine / Easy Redmine Konfiguration verändern"
+        }
+      }
+    },
+    "repository": {
+      "redmine": {
+        "*": {
+          "displayName": "Repository-spezifische Redmine / Easy Redmine Konfiguration ändern",
+          "description": "Darf die repository-spezifische Redmine / Easy Redmine Konfiguration verändern"
+        }
+      }
+    }
+  },
+  "verbs": {
+    "repository": {
+      "redmine": {
+        "displayName": "Redmine / Easy Redmine Konfiguration ändern",
+        "description": "Darf die Redmine / Easy Redmine Konfiguration verändern"
+      }
+    }
+  },
+  "validation": {
+    "RedmineCommitMessageIssueKeyValidator": {
+      "name": "Redmine / Easy Redmine Ticket Schlüssel Validator",
+      "branches": "{{ branches }}",
+      "allBranches": "<Alle Branches>",
+      "description": "Validiert auf Redmine / Easy Redmine Ticket IDs",
+      "defaultErrorMessage": "<Standard-Fehlermeldung>"
+    }
+  },
+  "validator": {
+    "RedmineCommitMessageIssueKeyValidator": {
+      "name": "Redmine / Easy Redmine Ticket Schlüssel Validator",
+      "description": "Validiert auf gültige Ticket Schlüssel beginnend mit \"#\".",
+      "branches": {
+        "label": "Branches",
+        "helpText": "Komma-separierte Liste der zu validierenden Branches. Leer lassen um alle Branches zu validieren.\nBeispiel: master,feature/*"
+      }
+    }
+  }
+}

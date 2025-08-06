@@ -1,0 +1,83 @@
+{
+  "scm-redmine-plugin": {
+    "config": {
+      "link": "Redmine / Easy Redmine",
+      "title": "Redmine / Easy Redmine",
+      "form": {
+        "url": "URL",
+        "url-helptext": "URL of Redmine / Easy Redmine installation (including context path).",
+        "username": "Username",
+        "username-helptext": "The Redmine / Easy Redmine user name",
+        "password": "Password",
+        "password-helptext": "The Redmine / Easy Redmine password",
+        "textFormatting": "Text Formatting",
+        "textFormatting-helptext": "Type of text formatting used for Redmine / Easy Redmine comments.",
+        "autoClose": "Change issue state",
+        "autoClose-helptext": "Enables the state changes function. SCM-Manager searches for issue keys and issue status keywords in commit messages and pull requests. If both are found in a text, SCM-Manager changes the state of the issue in Redmine / Easy Redmine.",
+        "disableStateChangeByCommit": "Disable issue state changes by commits",
+        "disableStateChangeByCommit-helptext": "Disables the state changes by commits. If this is activated, only pull requests will trigger state changes.",
+        "updateIssues": "Update issues with a comment",
+        "updateIssues-helptext": "Enable the automatic update function. SCM-Manager searches for issue keys in commit messages and pull requests. If an issue id is found, SCM-Manager updates the issue with a comment.",
+        "disableRepositoryConfiguration": "Disable repository specific configuration",
+        "disableRepositoryConfiguration-helptext": "Do not allow repository owners to configure Redmine / Easy Redmine instances."
+      },
+      "mapping": {
+        "title": "Redmine / Easy Redmine Status Mapping",
+        "help": "Map keywords to Redmine / Easy Redmine status in order to trigger state changes with those keywords.",
+        "status": "Redmine / Easy Redmine Status",
+        "statusHelp": "Name of Redmine / Easy Redmine status which should be mapped e.g.: Closed",
+        "keywords": "List of Keywords",
+        "keywordsPlaceholder": "Keyword1,Keyword2",
+        "keywordsHelp": "Comma separated list of keywords which are mapped to the Redmine / Easy Redmine status e.g.: closes, closing",
+        "no-mapping": "No mappings defined",
+        "add": "Add Mapping",
+        "remove": "Remove mapping"
+      }
+    }
+  },
+  "permissions": {
+    "configuration": {
+      "read,write": {
+        "redmine": {
+          "displayName": "Modify global Redmine / Easy Redmine configuration",
+          "description": "May modify the global Redmine / Easy Redmine configuration"
+        }
+      }
+    },
+    "repository": {
+      "redmine": {
+        "*": {
+          "displayName": "Modify repository specific Redmine / Easy Redmine configuration",
+          "description": "May modify the repository specific Redmine / Easy Redmine configuration for all repositories"
+        }
+      }
+    }
+  },
+  "verbs": {
+    "repository": {
+      "redmine": {
+        "displayName": "configure Redmine / Easy Redmine",
+        "description": "May modify the repository specific Redmine / Easy Redmine configuration"
+      }
+    }
+  },
+  "validation": {
+    "RedmineCommitMessageIssueKeyValidator": {
+      "name": "Redmine / Easy Redmine Issue Key Validator",
+      "branches": "{{ branches }}",
+      "allBranches": "<all branches>",
+      "description": "Validates for Redmine / Easy Redmine issue ids starting with \"#\"",
+      "defaultErrorMessage": "<default error message>"
+    }
+  },
+  "validator": {
+    "RedmineCommitMessageIssueKeyValidator": {
+      "name": "Redmine / Easy Redmine Issue Key Validator",
+      "description": "Use this to validate each commit message for Redmine / Easy Redmine issue ids.",
+      "branches": {
+        "label": "Branches",
+        "helpText": "List of the branches which should be validated separated by comma. Leave blank to validate all branches.\nExample: master,feature/*"
+      }
+    }
+  }
+}

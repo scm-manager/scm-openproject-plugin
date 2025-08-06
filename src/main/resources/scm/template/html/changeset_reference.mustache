@@ -1,0 +1,10 @@
+<p>
+  [SCM] Issue referenced by commit of repository {{ repository.namespace }}/{{ repository.name }}<br/><br/>
+  {{ content.description }}<br/><br/>
+  <strong>Author:</strong> {{ author }}<br/>
+  {{#contributors.Committed-by}}
+    <strong>Committed by:</strong> {{ . }}<br/>
+  {{/contributors.Committed-by}}
+  <strong>Pushed by:</strong> {{ principal }}<br/>
+  <a href="{{ link }}" target="_blank" rel="noreferrer">Changes</a>
+</p>

@@ -1,0 +1,6 @@
+- section: First steps
+  entries:
+    - /configuration/
+    - /permissions/
+    - /commitmessagechecker/
+    - /pullrequests/

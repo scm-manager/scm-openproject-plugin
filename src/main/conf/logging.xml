@@ -35,7 +35,7 @@
 
   <logger name="sonia.scm" level="INFO" />
   <logger name="com.cloudogu" level="INFO" />
-  <logger name="sonia.scm.redmine" level="TRACE" />
+  <logger name="com.cloudogu.openproject" level="TRACE" />
   <logger name="sonia.scm.issuetracker" level="TRACE" />
 
   <root level="WARN">

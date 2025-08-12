@@ -4,18 +4,19 @@
   </a>
 </p>
 <h1 align="center">
-  scm-redmine-plugin
+  scm-openproject-plugin
 </h1>
 
-This plugin integrates Redmine to SCM-Manager.
+This plugin integrates OpenProject to SCM-Manager.
 
 ## Usage
 
-Find out how this plugin can be used on the [user documentation page](https://scm-manager.org/plugins/scm-redmine-plugin/docs).
+Find out how this plugin can be used on the [user documentation page](https://scm-manager.org/plugins/scm-openproject-plugin/docs).
 
 ## Local development
-When you first start the Redmine server using `docker-compose up`, you have to enable API requests for the server.
-This can be done in Redmine under "Administration" -> "Settings" -> "API" -> "Enable REST web service". 
+When you first start the OpenProject server using `docker-compose up`, you have to enable API requests for the server.
+This can be done in OpenProject under "Administration" → "API and webhooks" → "Enable REST web service".
+Further, you have to create an access key under "Account Settings" → "Access tokens". 
 
 ## Build and testing
 

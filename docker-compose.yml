@@ -17,7 +17,13 @@
 version: '3'
 services:
 
-  redmine:
-    image: redmine:4.1
+  openproject:
+    image: openproject/openproject:16
     ports:
-     - "3000:3000"
+     - "8080:80"
+    environment:
+      OPENPROJECT_SECRET_KEY_BASE: "secret"
+      OPENPROJECT_HOST__NAME: "localhost:8080"
+      OPENPROJECT_HTTPS: false
+      OPENPROJECT_DEFAULT__LANGUAGE: "en"
+

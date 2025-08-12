@@ -16,16 +16,15 @@
 
 import { Links } from "@scm-manager/ui-types";
 
-export type RedmineConfiguration = {
+export type OpenprojectConfiguration = {
   url: string;
   autoClose: boolean;
   updateIssues: boolean;
   usernameTransformPattern: string;
-  textFormatting: string;
   keywordMapping: Record<string, string>;
   _links: Links;
 };
 
-export type RedmineGlobalConfiguration = RedmineConfiguration & {
+export type OpenprojectGlobalConfiguration = OpenprojectConfiguration & {
   disableRepositoryConfiguration: boolean;
 };

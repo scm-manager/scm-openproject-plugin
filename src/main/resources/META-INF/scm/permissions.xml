@@ -16,9 +16,9 @@
 
 <permissions>
   <permission>
-    <value>configuration:read,write:redmine</value>
+    <value>configuration:read,write:openproject</value>
   </permission>
   <permission>
-    <value>repository:redmine:*</value>
+    <value>repository:openproject:*</value>
   </permission>
 </permissions>

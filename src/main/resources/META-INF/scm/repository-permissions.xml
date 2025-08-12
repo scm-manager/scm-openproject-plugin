@@ -16,6 +16,6 @@
 
 <repository-permissions>
   <verbs>
-    <verb>redmine</verb>
+    <verb>openproject</verb>
   </verbs>
 </repository-permissions>

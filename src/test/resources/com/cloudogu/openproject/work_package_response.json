@@ -1,0 +1,444 @@
+{
+  "derivedStartDate": null,
+  "derivedDueDate": null,
+  "spentTime": "PT0S",
+  "laborCosts": "0.00 EUR",
+  "materialCosts": "0.00 EUR",
+  "overallCosts": "0.00 EUR",
+  "_embedded": {
+    "attachments": {
+      "_type": "Collection",
+      "total": 0,
+      "count": 0,
+      "_embedded": {
+        "elements": []
+      },
+      "_links": {
+        "self": {
+          "href": "/api/v3/work_packages/42/attachments"
+        }
+      }
+    },
+    "relations": {
+      "_type": "Collection",
+      "total": 0,
+      "count": 0,
+      "_embedded": {
+        "elements": []
+      },
+      "_links": {
+        "self": {
+          "href": "/api/v3/work_packages/42/relations"
+        }
+      }
+    },
+    "type": {
+      "_type": "Type",
+      "id": 1,
+      "name": "Task",
+      "color": "#1A67A3",
+      "position": 1,
+      "isDefault": true,
+      "isMilestone": false,
+      "createdAt": "2025-08-05T08:35:00.301Z",
+      "updatedAt": "2025-08-05T08:35:00.301Z",
+      "_links": {
+        "self": {
+          "href": "/api/v3/types/1",
+          "title": "Task"
+        }
+      }
+    },
+    "priority": {
+      "_type": "Priority",
+      "id": 8,
+      "name": "Normal",
+      "position": 2,
+      "color": "#74C0FC",
+      "isDefault": true,
+      "isActive": true,
+      "_links": {
+        "self": {
+          "href": "/api/v3/priorities/8",
+          "title": "Normal"
+        }
+      }
+    },
+    "project": {
+      "_type": "Project",
+      "id": 3,
+      "identifier": "wald",
+      "name": "Wald",
+      "active": true,
+      "public": false,
+      "description": {
+        "format": "markdown",
+        "raw": "",
+        "html": ""
+      },
+      "createdAt": "2025-08-05T08:47:16.790Z",
+      "updatedAt": "2025-08-05T08:47:16.790Z",
+      "statusExplanation": {
+        "format": "markdown",
+        "raw": "",
+        "html": ""
+      },
+      "_links": {
+        "self": {
+          "href": "/api/v3/projects/3",
+          "title": "Wald"
+        },
+        "createWorkPackage": {
+          "href": "/api/v3/projects/3/work_packages/form",
+          "method": "post"
+        },
+        "createWorkPackageImmediately": {
+          "href": "/api/v3/projects/3/work_packages",
+          "method": "post"
+        },
+        "workPackages": {
+          "href": "/api/v3/projects/3/work_packages"
+        },
+        "storages": [],
+        "categories": {
+          "href": "/api/v3/projects/3/categories"
+        },
+        "versions": {
+          "href": "/api/v3/projects/3/versions"
+        },
+        "memberships": {
+          "href": "/api/v3/memberships?filters=%5B%7B%22project%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%223%22%5D%7D%7D%5D"
+        },
+        "types": {
+          "href": "/api/v3/projects/3/types"
+        },
+        "update": {
+          "href": "/api/v3/projects/3/form",
+          "method": "post"
+        },
+        "updateImmediately": {
+          "href": "/api/v3/projects/3",
+          "method": "patch"
+        },
+        "delete": {
+          "href": "/api/v3/projects/3",
+          "method": "delete"
+        },
+        "schema": {
+          "href": "/api/v3/projects/schema"
+        },
+        "status": {
+          "href": null
+        },
+        "ancestors": [],
+        "projectStorages": {
+          "href": "/api/v3/project_storages?filters=%5B%7B%22projectId%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%223%22%5D%7D%7D%5D"
+        },
+        "parent": {
+          "href": null
+        }
+      }
+    },
+    "status": {
+      "_type": "Status",
+      "id": 7,
+      "name": "done",
+      "isClosed": true,
+      "color": "#CC5DE8",
+      "isDefault": false,
+      "isReadonly": false,
+      "excludedFromTotals": false,
+      "defaultDoneRatio": 40,
+      "position": 7,
+      "_links": {
+        "self": {
+          "href": "/api/v3/statuses/7",
+          "title": "done"
+        }
+      }
+    },
+    "author": {
+      "_type": "User",
+      "id": 4,
+      "name": "OpenProject Admin",
+      "createdAt": "2025-08-05T08:35:01.623Z",
+      "updatedAt": "2025-08-05T08:39:01.074Z",
+      "login": "admin",
+      "admin": true,
+      "firstName": "OpenProject",
+      "lastName": "Admin",
+      "email": "admin@example.net",
+      "avatar": "http://gravatar.com/avatar/cb4f282fed12016bd18a879c1f27ff97?default=404&secure=false",
+      "status": "active",
+      "identityUrl": null,
+      "language": "en",
+      "_links": {
+        "self": {
+          "href": "/api/v3/users/4",
+          "title": "OpenProject Admin"
+        },
+        "memberships": {
+          "href": "/api/v3/memberships?filters=%5B%7B%22principal%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%224%22%5D%7D%7D%5D",
+          "title": "Memberships"
+        },
+        "showUser": {
+          "href": "/users/4",
+          "type": "text/html"
+        },
+        "updateImmediately": {
+          "href": "/api/v3/users/4",
+          "title": "Update admin",
+          "method": "patch"
+        },
+        "lock": {
+          "href": "/api/v3/users/4/lock",
+          "title": "Set lock on admin",
+          "method": "post"
+        }
+      }
+    },
+    "customActions": [],
+    "costsByType": {
+      "_type": "Collection",
+      "total": 0,
+      "count": 0,
+      "_embedded": {
+        "elements": []
+      },
+      "_links": {
+        "self": {
+          "href": "/api/v3/work_packages/42/summarized_costs_by_type"
+        }
+      }
+    }
+  },
+  "_type": "WorkPackage",
+  "id": 42,
+  "lockVersion": 3,
+  "subject": "Baum pflanzen",
+  "description": {
+    "format": "markdown",
+    "raw": "",
+    "html": ""
+  },
+  "scheduleManually": true,
+  "startDate": null,
+  "dueDate": null,
+  "estimatedTime": null,
+  "derivedEstimatedTime": null,
+  "derivedRemainingTime": null,
+  "duration": null,
+  "ignoreNonWorkingDays": false,
+  "percentageDone": null,
+  "derivedPercentageDone": null,
+  "createdAt": "2025-08-05T08:47:42.371Z",
+  "updatedAt": "2025-08-06T05:29:43.818Z",
+  "_links": {
+    "attachments": {
+      "href": "/api/v3/work_packages/42/attachments"
+    },
+    "addAttachment": {
+      "href": "/api/v3/work_packages/42/attachments",
+      "method": "post"
+    },
+    "fileLinks": {
+      "href": "/api/v3/work_packages/42/file_links"
+    },
+    "addFileLink": {
+      "href": "/api/v3/work_packages/42/file_links",
+      "method": "post"
+    },
+    "update": {
+      "href": "/api/v3/work_packages/42/form",
+      "method": "post"
+    },
+    "schema": {
+      "href": "/api/v3/work_packages/schemas/3-1"
+    },
+    "updateImmediately": {
+      "href": "/api/v3/work_packages/42",
+      "method": "patch"
+    },
+    "delete": {
+      "href": "/api/v3/work_packages/42",
+      "method": "delete"
+    },
+    "logTime": {
+      "href": "/api/v3/time_entries",
+      "title": "Log time on work package 'Baum pflanzen'"
+    },
+    "move": {
+      "href": "/work_packages/42/move/new",
+      "type": "text/html",
+      "title": "Move work package 'Baum pflanzen'"
+    },
+    "copy": {
+      "href": "/work_packages/42/copy",
+      "type": "text/html",
+      "title": "Copy work package 'Baum pflanzen'"
+    },
+    "pdf": {
+      "href": "/work_packages/42.pdf",
+      "type": "application/pdf",
+      "title": "Export as PDF"
+    },
+    "generate_pdf": {
+      "href": "/work_packages/42/generate_pdf_dialog",
+      "type": "text/vnd.turbo-stream.html",
+      "title": "Generate PDF"
+    },
+    "atom": {
+      "href": "/work_packages/42.atom",
+      "type": "application/rss+xml",
+      "title": "Atom feed"
+    },
+    "availableRelationCandidates": {
+      "href": "/api/v3/work_packages/42/available_relation_candidates",
+      "title": "Potential work packages to relate to"
+    },
+    "customFields": {
+      "href": "/projects/wald/settings/custom_fields",
+      "type": "text/html",
+      "title": "Custom fields"
+    },
+    "configureForm": {
+      "href": "/types/1/form_configuration/edit",
+      "type": "text/html",
+      "title": "Configure form"
+    },
+    "activities": {
+      "href": "/api/v3/work_packages/42/activities"
+    },
+    "availableWatchers": {
+      "href": "/api/v3/work_packages/42/available_watchers"
+    },
+    "relations": {
+      "href": "/api/v3/work_packages/42/relations"
+    },
+    "watchers": {
+      "href": "/api/v3/work_packages/42/watchers"
+    },
+    "addWatcher": {
+      "href": "/api/v3/work_packages/42/watchers",
+      "method": "post",
+      "payload": {
+        "user": {
+          "href": "/api/v3/users/{user_id}"
+        }
+      },
+      "templated": true
+    },
+    "removeWatcher": {
+      "href": "/api/v3/work_packages/42/watchers/{user_id}",
+      "method": "delete",
+      "templated": true
+    },
+    "addRelation": {
+      "href": "/api/v3/work_packages/42/relations",
+      "method": "post",
+      "title": "Add relation"
+    },
+    "addChild": {
+      "href": "/api/v3/projects/wald/work_packages",
+      "method": "post",
+      "title": "Add child of Baum pflanzen"
+    },
+    "changeParent": {
+      "href": "/api/v3/work_packages/42",
+      "method": "patch",
+      "title": "Change parent of Baum pflanzen"
+    },
+    "addComment": {
+      "href": "/api/v3/work_packages/42/activities",
+      "method": "post",
+      "title": "Add comment"
+    },
+    "previewMarkup": {
+      "href": "/api/v3/render/markdown?context=/api/v3/work_packages/42",
+      "method": "post"
+    },
+    "timeEntries": {
+      "href": "/api/v3/time_entries?filters=%5B%7B%22work_package_id%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%2242%22%5D%7D%7D%5D",
+      "title": "Time entries"
+    },
+    "category": {
+      "href": null
+    },
+    "type": {
+      "href": "/api/v3/types/1",
+      "title": "Task"
+    },
+    "priority": {
+      "href": "/api/v3/priorities/8",
+      "title": "Normal"
+    },
+    "project": {
+      "href": "/api/v3/projects/3",
+      "title": "Wald"
+    },
+    "projectPhaseDefinition": {
+      "href": null,
+      "title": null
+    },
+    "status": {
+      "href": "/api/v3/statuses/7",
+      "title": "In progress"
+    },
+    "author": {
+      "href": "/api/v3/users/4",
+      "title": "OpenProject Admin"
+    },
+    "responsible": {
+      "href": null
+    },
+    "assignee": {
+      "href": null
+    },
+    "version": {
+      "href": null
+    },
+    "logCosts": {
+      "href": "/work_packages/42/cost_entries/new",
+      "type": "text/html",
+      "title": "Log costs on Baum pflanzen"
+    },
+    "showCosts": {
+      "href": "/projects/3/cost_reports?fields%5B%5D=WorkPackageId&operators%5BWorkPackageId%5D=%3D&set_filter=1&values%5BWorkPackageId%5D=42",
+      "type": "text/html",
+      "title": "Show cost entries"
+    },
+    "costsByType": {
+      "href": "/api/v3/work_packages/42/summarized_costs_by_type"
+    },
+    "github_pull_requests": {
+      "href": "/api/v3/work_packages/42/github_pull_requests",
+      "title": "GitHub pull requests"
+    },
+    "gitlab_merge_requests": {
+      "href": "/api/v3/work_packages/42/gitlab_merge_requests",
+      "title": "Gitlab merge requests"
+    },
+    "gitlab_issues": {
+      "href": "/api/v3/work_packages/42/gitlab_issues",
+      "title": "Gitlab Issues"
+    },
+    "meetings": {
+      "href": "/work_packages/42/tabs/meetings",
+      "title": "meetings"
+    },
+    "self": {
+      "href": "/api/v3/work_packages/42",
+      "title": "Baum pflanzen"
+    },
+    "unwatch": {
+      "href": "/api/v3/work_packages/42/watchers/4",
+      "method": "delete"
+    },
+    "ancestors": [],
+    "parent": {
+      "href": null,
+      "title": null
+    },
+    "customActions": []
+  }
+}

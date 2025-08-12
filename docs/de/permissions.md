@@ -1,9 +1,9 @@
 ---
 title: Berechtigungen
 ---
-Das Redmine-Plugin bringt folgende Berechtigungen mit: 
+Das OpenProject-Plugin bringt folgende Berechtigungen mit: 
 
 * Globale Berechtigungen:
-    * Redmine Konfiguration bearbeiten: Darf die globale Redmine Konfiguration ändern.
+    * OpenProject-Konfiguration bearbeiten: Darf die globale OpenProject-Konfiguration ändern.
 * Repository-spezifische Berechtigungen
-    * Redmine Konfiguration: Darf die Redmine Konfiguration des jeweiligen Repository ändern.
+    * OpenProject-Konfiguration: Darf die OpenProject-Konfiguration des jeweiligen Repositorys ändern.

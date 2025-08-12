@@ -59,7 +59,7 @@ const MappingForm: FC<MappingProps> = ({ mapping, remove, update }) => {
           className="is-grouped"
           onChange={onStatusChange}
           value={mapping.status}
-          placeholder={t("scm-redmine-plugin.config.mapping.status")}
+          placeholder={t("scm-openproject-plugin.config.mapping.status")}
         />
       </VCenteredTd>
       <VCenteredTd>
@@ -67,7 +67,7 @@ const MappingForm: FC<MappingProps> = ({ mapping, remove, update }) => {
           className="is-grouped"
           onChange={onKeywordsChange}
           value={mapping.keywords}
-          placeholder={t("scm-redmine-plugin.config.mapping.keywordsPlaceholder")}
+          placeholder={t("scm-openproject-plugin.config.mapping.keywordsPlaceholder")}
         />
       </VCenteredTd>
       <VCenteredTd>
@@ -75,7 +75,7 @@ const MappingForm: FC<MappingProps> = ({ mapping, remove, update }) => {
           color="text"
           icon="trash"
           action={remove}
-          title={t("scm-redmine-plugin.config.mapping.remove")}
+          title={t("scm-openproject-plugin.config.mapping.remove")}
           className="px-2"
         />
       </VCenteredTd>
@@ -137,24 +137,24 @@ const KeyWordMapping: FC<Props> = props => {
   return (
     <>
       <h3>
-        {t("scm-redmine-plugin.config.mapping.title")}
-        <Help message={t("scm-redmine-plugin.config.mapping.help")} />
+        {t("scm-openproject-plugin.config.mapping.title")}
+        <Help message={t("scm-openproject-plugin.config.mapping.help")} />
       </h3>
       {!mappings || mappings.length === 0 ? (
         <Notification type="info">
-          {t("scm-redmine-plugin.config.mapping.no-mapping")}
+          {t("scm-openproject-plugin.config.mapping.no-mapping")}
         </Notification>
         ) : (
         <table className="card-table table is-hoverable is-fullwidth">
           <thead>
             <tr>
               <th>
-                {t("scm-redmine-plugin.config.mapping.status")}
-                <Help message={t("scm-redmine-plugin.config.mapping.statusHelp")} />
+                {t("scm-openproject-plugin.config.mapping.status")}
+                <Help message={t("scm-openproject-plugin.config.mapping.statusHelp")} />
               </th>
               <th>
-                {t("scm-redmine-plugin.config.mapping.keywords")}
-                <Help message={t("scm-redmine-plugin.config.mapping.keywordsHelp")} />
+                {t("scm-openproject-plugin.config.mapping.keywords")}
+                <Help message={t("scm-openproject-plugin.config.mapping.keywordsHelp")} />
               </th>
               <th />
             </tr>
@@ -166,7 +166,7 @@ const KeyWordMapping: FC<Props> = props => {
           </tbody>
         </table>
       )}
-      <AddMappingButton label={t("scm-redmine-plugin.config.mapping.add")} action={addMapping} />
+      <AddMappingButton label={t("scm-openproject-plugin.config.mapping.add")} action={addMapping} />
     </>
   );
 };

@@ -27,11 +27,11 @@ dependencies {
 
 scmPlugin {
   scmVersion = "3.9.0"
-  displayName = "Redmine"
-  description = "Redmine/EasyRedmine integration"
-  author = "Marvin Froeder"
+  displayName = "OpenProject"
+  description = "OpenProject integration"
+  author = "Cloudogu GmbH"
   category = "Issue Tracker"
-  avatarUrl = '/images/redmine-logo.png'
+  avatarUrl = '/images/OpenProjectLogo.png'
 
   run {
     loggingConfiguration = 'src/main/conf/logging.xml'
@@ -39,7 +39,7 @@ scmPlugin {
 
   openapi {
     packages = [
-      "sonia.scm.redmine.config",
+      "com.cloudogu.scm.openproject.config",
     ]
   }
 }

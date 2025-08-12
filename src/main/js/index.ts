@@ -15,18 +15,18 @@
  */
 
 import {ConfigurationBinder as cfgBinder} from "@scm-manager/ui-components";
-import RedmineGlobalConfiguration from "./RedmineGlobalConfiguration";
-import RedmineRepositoryConfiguration from "./RedmineRepositoryConfiguration";
+import OpenprojectGlobalConfiguration from "./OpenprojectGlobalConfiguration";
+import OpenprojectRepositoryConfiguration from "./OpenprojectRepositoryConfiguration";
 import {binder} from "@scm-manager/ui-extensions";
-import RedmineCommitMessageIssueKeyValidatorConfig from "./RedmineCommitMessageIssueKeyValidatorConfig";
+import OpenprojectCommitMessageIssueKeyValidatorConfig from "./OpenprojectCommitMessageIssueKeyValidatorConfig";
 
-cfgBinder.bindGlobal("/redmine", "scm-redmine-plugin.config.link", "redmineConfig", RedmineGlobalConfiguration);
+cfgBinder.bindGlobal("/openproject", "scm-openproject-plugin.config.link", "openprojectConfig", OpenprojectGlobalConfiguration);
 
 cfgBinder.bindRepositorySetting(
-  "/redmine",
-  "scm-redmine-plugin.config.link",
-  "redmineConfig",
-  RedmineRepositoryConfiguration
+  "/openproject",
+  "scm-openproject-plugin.config.link",
+  "openprojectConfig",
+  OpenprojectRepositoryConfiguration
 );
 
-binder.bind("commitMessageChecker.validator.RedmineCommitMessageIssueKeyValidator", RedmineCommitMessageIssueKeyValidatorConfig);
+binder.bind("commitMessageChecker.validator.OpenprojectCommitMessageIssueKeyValidator", OpenprojectCommitMessageIssueKeyValidatorConfig);

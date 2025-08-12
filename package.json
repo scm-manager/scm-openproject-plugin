@@ -1,7 +1,7 @@
 {
-    "name": "@scm-manager/scm-redmine-plugin",
+    "name": "@scm-manager/scm-openproject-plugin",
     "private": true,
-    "version": "3.4.2-SNAPSHOT",
+    "version": "1.0.0-SNAPSHOT",
     "license": "AGPL-3.0-only",
     "main": "./src/main/js/index.ts",
     "scripts": {

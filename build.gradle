@@ -22,7 +22,7 @@ dependencies {
   plugin "sonia.scm.plugins:scm-issuetracker-plugin:3.2.0"
   optionalPlugin "sonia.scm.plugins:scm-commit-message-checker-plugin:1.0.0"
 
-  testImplementation "com.github.sdorra:shiro-unit:1.0.1"
+  testImplementation "com.github.sdorra:shiro-unit:1.0.2"
 }
 
 scmPlugin {
